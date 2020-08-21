@@ -517,7 +517,10 @@
         }, 20);
 
         function onButtonClick() {
-            document.getElementById('textInput').className = "show";
+            document.getElementsByClassName('hide form-textbox').className = "show";
+
+            document.getElementById('textInput1').className = "show";
+
         }
 
         function target_popup(form) {
@@ -576,7 +579,10 @@
                     <div id="cid_60" class="form-input-wide" data-layout="half">
                         <select class="form-dropdown" id="input_60" name="q60_application" style="width:310px" data-component="dropdown" aria-labelledby="label_60">
             <option value=""> Please Select </option>
-            <option value="">  </option>
+            <option value="Application1"> Application1 </option>
+            <option value="Application1"> Application2 </option>
+            <option value="Application1"> Application3 </option>
+            
           </select>
                     </div>
                 </li>
@@ -658,7 +664,9 @@
                 <div data-align="form-buttons-left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField">
                     <input class="addStepBtn submit-button jf-form-buttons" type="button" name="answer" value="Add Steps" onclick="onButtonClick()" />
                     <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                    <input class="hide" type="text" id="textInput" value="..." />
+                    <!-- <input class="hide" type="text" id="textInput" value="..." /> -->
+                    <input type="text" id="textInput1" name="step1" class="hide form-textbox" size="30" value="" data-component="first" aria-labelledby="label_4 sublabel_4_first" />
+                    <input type="text" id="textInput2" name="step1" class="hide form-textbox" size="30" value="" data-component="first" aria-labelledby="label_4 sublabel_4_second" />
                 </div>
             </div>
         </li>
