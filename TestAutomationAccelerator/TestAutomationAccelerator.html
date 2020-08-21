@@ -394,9 +394,21 @@
             margin-top: auto;
             margin-top: initial;
         }
+        
+        .hide {
+            display: none;
+        }
+        
+        .show {
+            display: block;
+        }
         /*PREFERENCES STYLE*/
         /*__INSPECT_SEPERATOR__*/
         /* Injected CSS Code */
+        
+        .addStepBtn {
+            text-align: center;
+        }
     </style>
 
     <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
@@ -503,11 +515,20 @@
                 "type": "control_dropdown"
             }]);
         }, 20);
+
+        function onButtonClick() {
+            document.getElementById('textInput').className = "show";
+        }
+
+        function target_popup(form) {
+            window.open('', 'formpopup', 'width=1000,height=1000,resizeable,scrollbars');
+            form.target = 'formpopup';
+        }
     </script>
 </head>
 
 <body>
-    <form class="jotform-form" action="https://submit.jotform.com/submit/202327075533450/" method="post" name="form_202327075533450" id="202327075533450" accept-charset="utf-8" autocomplete="on">
+    <form class="jotform-form" action="..." onsubmit="target_popup(this)" method="post" name="form_202327075533450" id="202327075533450" accept-charset="utf-8" autocomplete="on">
         <input type="hidden" name="formID" value="202327075533450" />
         <input type="hidden" id="JWTContainer" value="" />
         <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -627,50 +648,50 @@
         </span>
         </div>
         </li>
+
+
+
+
+
+        <li class="form-line" data-type="control_button" id="id_56">
+            <div id="cid_56" class="form-input-wide" data-layout="full">
+                <div data-align="form-buttons-left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField">
+                    <input class="addStepBtn submit-button jf-form-buttons" type="button" name="answer" value="Add Steps" onclick="onButtonClick()" />
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <input class="hide" type="text" id="textInput" value="..." />
+                </div>
+            </div>
+        </li>
+
         <li class="form-line" data-type="control_button" id="id_56">
             <div id="cid_56" class="form-input-wide" data-layout="full">
                 <div data-align="left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField">
-                    <button id="input_56" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
-              Submit
+                    <button id="input_56" class="submit-button jf-form-buttons" onclick="onButtonClick()" data-component="button" data-content="">
+              Create Test Case
             </button>
                 </div>
             </div>
         </li>
+
+
         <li style="display:none">
             Should be Empty:
             <input type="text" name="website" value="" />
         </li>
         </ul>
         </div>
-        <script>
-            JotForm.showJotFormPowered = "new_footer";
-        </script>
-        <script>
-            JotForm.poweredByText = "Powered by JotForm";
-        </script>
+
         <input type="hidden" id="simple_spc" name="simple_spc" value="202327075533450" />
         <script type="text/javascript">
             document.getElementById("si" + "mple" + "_spc").value = "202327075533450-202327075533450";
         </script>
-        <div class="formFooter-heightMask">
+
         </div>
-        <div class="formFooter f6">
-            <div class="formFooter-wrapper formFooter-leftSide">
-                <a href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=202327075533450&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="https://cdn.jotfor.ms/assets/img/logo/logo-new@1x.png" alt="Jotform Logo"></a>
-            </div>
-            <div class="formFooter-wrapper formFooter-rightSide">
-                <span class="formFooter-text">
-        Now create your own JotForm - It's free!
-      </span>
-                <a class="formFooter-button" href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=202327075533450&utm_content=jotform_button&utm_campaign=powered_by_jotform_le" target="_blank">Create your own JotForm</a>
-            </div>
         </div>
     </form>
 </body>
 
 </html>
-<script type="text/javascript">
-    JotForm.ownerView = true;
-</script>
+
 <script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.19730"></script>
 <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.19730"></script>
